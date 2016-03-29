@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Memory Drop
+logo: logo-memorydrop.png
 ---
 
 ### How to run the game
@@ -40,6 +41,7 @@ This game is a prototype made for the **Ubisoft Game Lab Competition** 2016.
 * Lounes Jaber
 * Passet Fany
 
-### Voice
+### Voices
 
+* Barre Romain
 * Gauthier-Monet Catherine
