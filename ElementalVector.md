@@ -4,8 +4,6 @@ title: Elemental Vector
 download: http://lectem.fr/dl/ElementalVector.zip
 redirect_from: 
   - /ElementalVector/
-  - /ElementalVector2/
-  - /ElementalVector2
 ---
 
 
