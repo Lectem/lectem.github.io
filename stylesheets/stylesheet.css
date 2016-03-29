@@ -245,6 +245,10 @@ Full-Width Styles
   background: #212121;
 }
 
+#header_wrap .inner {
+  padding: 50px 10px 30px 10px;
+}
+
 #header_wrap_memorydrop {
   background: #590C00;
   background-image: url('../images/header.jpg');
@@ -253,7 +257,7 @@ Full-Width Styles
   background-position: center center;
 }
 
-#header_wrap .inner {
+#header_wrap_memorydrop .inner {
   padding: 50px 10px 30px 10px;
 }
 
