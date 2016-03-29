@@ -16,3 +16,6 @@ url: "http://lectem.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-redirect-from

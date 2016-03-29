@@ -2,6 +2,10 @@
 layout: default
 title: Elemental Vector
 download: http://lectem.fr/dl/ElementalVector.zip
+redirect_from: 
+  - /testredirect
+  - /ElementalVector2
+  - /ElementalVector2/
 ---
 
 
