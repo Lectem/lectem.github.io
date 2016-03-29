@@ -5,9 +5,7 @@
 	  {% if page.logo %}
 		<img class="logo" src="{{ page.logo }}">
 	  {% else %}
-	  {
-		{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-	  }
+	  {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 	  {% endif %}</h1>
 	  <h2 id="project_tagline">{{ site.tagline }}</h2>
 {% if page.download %}
