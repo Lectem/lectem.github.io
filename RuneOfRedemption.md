@@ -2,7 +2,7 @@
 layout: default
 title: Rune Of Redemption
 logo: images/RuneOfRedemption/ror_logo.png
-download: dl/RuneOfRedemption.zip
+download: download/RuneOfRedemption.zip
 redirect_from: 
   - /RuneOfRedemption/
 ---
