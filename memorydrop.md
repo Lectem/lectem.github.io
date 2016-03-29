@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Memory Drop
+headersuffix: _memorydrop
 ---
 
 ### How to run the game
