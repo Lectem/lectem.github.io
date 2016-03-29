@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Memory Drop
-logo: logo-memorydrop.png
 ---
 
 ### How to run the game
