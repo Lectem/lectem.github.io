@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<div id="header_wrap" class="outer">
+<div id="header_wrap{% if page.headersuffix %}{{ page.headersuffix }}{% endif %}" class="outer">
 	<header class="inner">
 	  <h1 id="project_title">
 	  {% if page.logo %}

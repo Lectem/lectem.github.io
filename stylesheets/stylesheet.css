@@ -242,6 +242,10 @@ Full-Width Styles
 }
 
 #header_wrap {
+  background: #212121;
+}
+
+#header_wrap_memorydrop {
   background: #590C00;
   background-image: url('../images/header.jpg');
   background-repeat: no-repeat;
