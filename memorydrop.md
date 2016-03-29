@@ -3,8 +3,6 @@ layout: default
 title: Memory Drop
 ---
 
-![screenshot](images/screenshot.png)
-
 ### How to run the game
 
 Download and extract the .zip archive.
