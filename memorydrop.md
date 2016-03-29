@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Memory Drop
 ---
 
 ![screenshot](images/screenshot.png)
