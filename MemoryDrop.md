@@ -40,8 +40,9 @@ A: Update your drivers, and make sure the right graphics card is used. (right cl
 
 ### Special thanks to :
 
-#### Our mentors
+#### Our professor and mentors
 
+* Bob-Antoine-Jerry Ménélas
 * Emery François
 * Lasserre Jérôme
 
