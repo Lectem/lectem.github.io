@@ -23,8 +23,8 @@ Press the Select button in-game to show the list of controls, note that all cont
 
 ### FAQ
 
-**Q:** The game complains about updating drivers or crashes when starting a new game.
-**A:** Update your drivers, and make sure the right graphics card is used. (right click on MemoryDrop.exe -> Run with graphics processor -> Choose NVidia/ATI)
+Q: The game complains about updating drivers or crashes when starting a new game.
+A: Update your drivers, and make sure the right graphics card is used. (right click on MemoryDrop.exe -> Run with graphics processor -> Choose NVidia/ATI)
 
 
 ### Authors
