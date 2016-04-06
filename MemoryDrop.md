@@ -5,6 +5,11 @@ headersuffix: _memorydrop
 download: https://drive.google.com/open?id=0B6T7Ki5czaPEOGJ3MXZsMzR0RU0
 ---
 
+# This page will be updated and completed once the results of the competition are out.
+
+
+
+
 ### How to run the game
 
 Download and extract the .zip archive.
