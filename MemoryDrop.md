@@ -53,7 +53,7 @@ A: Update your drivers, and make sure the right graphics card is used. (right cl
 
 #### Concept artists
 
-* Bellavance Julien
+* Bellavance Julie
 * Lounes Jaber
 * Passet Fany
 
