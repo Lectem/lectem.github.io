@@ -17,6 +17,7 @@ You might need to install some dependencies when launching the game for the firs
 ### Description
 
 This game is a prototype made for the **Ubisoft Game Lab Competition** 2016. For more information visit [https://montreal.ubisoft.com/en/game-lab-competition/](https://montreal.ubisoft.com/en/game-lab-competition/).
+
 It was nominated for 3 awards out of 8 : Best Technical Challenge and Innovation, Best Game Design, Best Creativity and Integration of the Theme.
 
 ### Controls
