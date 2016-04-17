@@ -5,10 +5,6 @@ headersuffix: _memorydrop
 download: https://drive.google.com/open?id=0B6T7Ki5czaPEOGJ3MXZsMzR0RU0
 ---
 
-# This page will be updated and completed once the results of the competition are out.
-
-
-
 
 ### How to run the game
 
@@ -20,7 +16,8 @@ You might need to install some dependencies when launching the game for the firs
 
 ### Description
 
-This game is a prototype made for the **Ubisoft Game Lab Competition** 2016.
+This game is a prototype made for the **Ubisoft Game Lab Competition** 2016. For more information visit [https://montreal.ubisoft.com/en/game-lab-competition/](https://montreal.ubisoft.com/en/game-lab-competition/).
+It was nominated for 3 awards out of 8 : Best Technical Challenge and Innovation, Best Game Design, Best Creativity and Integration of the Theme.
 
 ### Controls
 
