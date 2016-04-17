@@ -5,6 +5,12 @@ headersuffix: _memorydrop
 download: https://drive.google.com/open?id=0B6T7Ki5czaPEOGJ3MXZsMzR0RU0
 ---
 
+### Description
+
+This game is a prototype made for the **Ubisoft Game Lab Competition** 2016. For more information visit [https://montreal.ubisoft.com/en/game-lab-competition/](https://montreal.ubisoft.com/en/game-lab-competition/).
+
+It was nominated for 3 awards out of 8 : Best Technical Challenge and Innovation, Best Game Design and Best Creativity and Integration of the Theme.
+
 
 ### How to run the game
 
@@ -13,12 +19,6 @@ Run MemoryDrop.exe.
 
 Please note that the game requires a **Gamepad Controller** and a 64bit version of windows. 
 You might need to install some dependencies when launching the game for the first time.
-
-### Description
-
-This game is a prototype made for the **Ubisoft Game Lab Competition** 2016. For more information visit [https://montreal.ubisoft.com/en/game-lab-competition/](https://montreal.ubisoft.com/en/game-lab-competition/).
-
-It was nominated for 3 awards out of 8 : Best Technical Challenge and Innovation, Best Game Design and Best Creativity and Integration of the Theme.
 
 ### Controls
 
