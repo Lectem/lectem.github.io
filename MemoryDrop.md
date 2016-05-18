@@ -7,14 +7,25 @@ download: https://drive.google.com/open?id=0B6T7Ki5czaPEOGJ3MXZsMzR0RU0
 
 # This website will be updated with more content as soon as possible
 
+
+
 ### Description
+
+Save the ocean by using an ancient force and by traveling through time to enable new possibilities!
+
+The ocean was stolen by the Nemesians and locked in gigantic bubbles. 
+Your objective is to free the waters and bring life back to those now arid lands by using the powers of your ancesters.
+Using the help of his grand-mother from the past, the young Dæris will be able to progress through the desert and destroy the generators powering the ocean shackles.
+
+![screenshot-past](images/MemoryDrop/ssMD-past-thumb.png)
+![screenshot-present](images/MemoryDrop/ssMD-present-thumb.png)
+
+### Ubisoft Game Lab Competition
 
 This game is a prototype made for the **Ubisoft Game Lab Competition** 2016. For more information visit [https://montreal.ubisoft.com/en/game-lab-competition/](https://montreal.ubisoft.com/en/game-lab-competition/).
 
 It was nominated for 3 awards out of 8 : Best Technical Challenge and Innovation, Best Game Design and Best Creativity and Integration of the Theme.
 
-![screenshot-past](images/MemoryDrop/ssMD-past-thumb.png)
-![screenshot-present](images/MemoryDrop/ssMD-present-thumb.png)
 
 ### How to run the game
 
