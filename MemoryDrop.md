@@ -30,7 +30,7 @@ It was nominated for 3 awards out of 8 : Best Technical Challenge and Innovation
 Download and extract the .zip archive.
 Run MemoryDrop.exe.
 
-Please note that the game requires a **Gamepad Controller** and a 64bit version of windows. 
+Please note that the game requires a XInput compatible **Gamepad Controller** and a 64bit version of windows. 
 You might need to install some dependencies when launching the game for the first time.
 
 ### Controls
