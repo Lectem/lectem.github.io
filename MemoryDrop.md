@@ -13,6 +13,8 @@ This game is a prototype made for the **Ubisoft Game Lab Competition** 2016. For
 
 It was nominated for 3 awards out of 8 : Best Technical Challenge and Innovation, Best Game Design and Best Creativity and Integration of the Theme.
 
+![screenshot-past](images/MemoryDrop/ssMD-past.png)
+![screenshot-present](images/MemoryDrop/ssMD-present.png)
 
 ### How to run the game
 
