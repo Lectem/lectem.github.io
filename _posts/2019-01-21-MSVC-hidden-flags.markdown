@@ -29,7 +29,7 @@ Some are well-documented flags, but I might make another post with the most inte
 
 # The flags list
 
-Note the flags listed are from the 14.16.27023 build of the compiler.
+Note the flags listed are from the 19.16.27025.1 build of the compiler (Visual Studio 2017 15.9.4).
 
 ## c1xx.dll
 
