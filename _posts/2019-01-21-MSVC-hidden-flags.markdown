@@ -29,7 +29,9 @@ Some are well-documented flags, but I might make another post with the most inte
 
 # The flags list
 
-## c1xx
+Note the flags listed are from the 14.16.27023 build of the compiler.
+
+## c1xx.dll
 
 * `-ACf*`
 * `-ACp*`
