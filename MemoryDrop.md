@@ -5,8 +5,6 @@ headersuffix: _memorydrop
 download: https://drive.google.com/open?id=0B6T7Ki5czaPEOGJ3MXZsMzR0RU0
 ---
 
-# This website will be updated with more content as soon as possible
-
 Save the ocean by using an ancient force and by traveling through time to enable new possibilities!
 
 ### Description
