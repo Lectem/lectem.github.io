@@ -7,7 +7,7 @@ hidden: true
 
 Aka:Story of one man-month of development lost due to a bug in a debugging tool.
 
-![ackiechan-meme](jackiechan-meme.jpg)
+![jackiechan-meme](/images/jackiechan-meme.jpg)
 
 Memory corruption can be hard to track, especially when you have a multithreaded application with features that makes it hard to reproduce.
 This is generally the case for games, where thousands of factors can make a race condition appear or not. Framerate could be unstable, the GPU could take a bit more time than usual to render, something being streamed for the internet took a bit longer than usual.
@@ -92,7 +92,7 @@ At first I used `aligned_*` allocation functions since that's what we were using
 
 To enable appverifier, add your application to the list, and for the debug heap check Basics -> Heaps as shown below:
 
-![appverifier-debug-heap](appverifier/appverifier-debug-heap.png)
+![appverifier-debug-heap](/images/appverifier/appverifier-debug-heap.png)
 
 You will note that AppVerifier will trigger the breakpoint for all define configurations except `AllocMethod_malloc` and `AllocMethod_ProcessHeapNoRealloc`. This is because `realloc` does not call `HeapReAlloc`. We can safely conclude that the issue happens only when calling `HeapReAlloc` in a multi-threaded context. Quite rare, but we were doing a lot of (re)allocations during loading, and allocating DirectX buffers on another thread so this triggered rather often on our codebase.  
 
