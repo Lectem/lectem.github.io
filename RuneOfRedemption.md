@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Rune Of Redemption
 logo: images/RuneOfRedemption/ror_logo.png
 download: download/RuneOfRedemption.zip

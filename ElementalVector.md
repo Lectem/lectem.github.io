@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Elemental Vector
 download: https://drive.google.com/file/d/0B6T7Ki5czaPETlFaLU9Ib0IwUkE/view?usp=sharing
 redirect_from: 
