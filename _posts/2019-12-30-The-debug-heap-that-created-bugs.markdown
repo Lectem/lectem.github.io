@@ -108,7 +108,7 @@ That's why I wanted to tell you that even though it rarely happens, your debuggi
 Always start by doubting your code, then your libraries, drivers, compiler, debugger, OS and lastly your hardware.
 Those things do happen, and remember that a debugging tool is still software and not always bug-free!
 
-For people with access to the Microsoft bug database (I don't) this is registered as bug #22979026, I also hope it can get fixed at some point as AppVerifier is a very useful tool. 
+For people with access to the Microsoft bug database (I don't) this is registered as bug `#22979026`, I also hope it can get fixed at some point as AppVerifier is a very useful tool. 
 For those who still want to use it and might have the same issue, know that you can write a small detours .dll that will do the zero-fill no matter what. 
 
 Maybe a topic for a future post?
