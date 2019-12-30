@@ -5,7 +5,9 @@ categories: windows heap appverifier detours
 hidden: true
 ---
 
-Story of one man-month of development lost during a year, due to a bug in a debugging tool.
+Aka:Story of one man-month of development lost due to a bug in a debugging tool.
+
+![ackiechan-meme](jackiechan-meme.jpg)
 
 Memory corruption can be hard to track, especially when you have a multithreaded application with features that makes it hard to reproduce.
 This is generally the case for games, where thousands of factors can make a race condition appear or not. Framerate could be unstable, the GPU could take a bit more time than usual to render, something being streamed for the internet took a bit longer than usual.
@@ -29,8 +31,8 @@ But the bug disappeared. And as our QA didn't reproduce it unless they used AppV
 Until we had another memory corruption. As usual I fired up AppVerifier and WinDbg. After running the game a few times, I found the crash we were looking for. However I did encounter once the old DirectX crash. It was not gone.
 So I fixed one issue. Then another. Used static analysis tools, other applications such as Intel Inspector, coded my own page guards, but nothing did it. I kept disabling gameplay features, but the bug stayed. And was most of the time getting harder to reproduce. 
 
-I did have a few suspects though, I knew that the problem was that memory allocated through HeapAlloc with HEAP_ZERO_MEMORY had parts not set to zero. And the issue I had in libcurl was similar: memory allocated with `calloc` was not zero-filled.
-I looked for ages where this could be triggered from. Most of the time, the value was filled with 0xCC, or 0xD0. Which respecitvely meant uninitialized memory or freed memory.
+I did have a few suspects though, I knew that the problem was that memory allocated through `HeapAlloc` with `HEAP_ZERO_MEMORY` had parts not set to zero. And the issue I had in libcurl was similar: memory allocated with `calloc` was not zero-filled.
+I looked for ages where this could be triggered from. Most of the time, the value was filled with `0xCC`, or `0xD0`. Which respecitvely meant uninitialized memory or freed memory.
 
 And so I assumed there was a use after free somewhere.
 My hypothesis was the following:
