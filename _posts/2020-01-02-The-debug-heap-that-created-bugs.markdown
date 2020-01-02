@@ -9,7 +9,8 @@ Aka:Story of one man-month of development lost due to a bug in a debugging tool.
 ![jackiechan-meme](/images/jackiechan-meme.jpg)
 
 
-** Update Jan 3, 2020: ** The bug is also present with single-threaded applications.
+
+**Update Jan 3, 2020**: The bug is also present with single-threaded applications.
 
 ## Memory corruption
 
@@ -133,9 +134,10 @@ Maybe a topic for a future post?
 
 ## Update following discussions again
 
-@MSFTJesse [reddit comment](https://www.reddit.com/r/cpp/comments/ej39ma/the_debug_heap_that_created_bugs/fcvll29?utm_source=share&utm_medium=web2x) kindly sent a [time travel debugging](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview) trace to the **AppVerifier** team, and after speaking a bit with him we determined the issue was actually (a bit) worse as it also happens in a single-threaded context.
-I updated the sample code with a `TestIsSingleThread` that also triggers the breakpoint. I left the multi-threaded version of the test for reference.
+@MSFTJesse (see [reddit comment](https://www.reddit.com/r/cpp/comments/ej39ma/the_debug_heap_that_created_bugs/fcvll29?utm_source=share&utm_medium=web2x)) kindly sent a [time travel debugging](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview) trace to the **AppVerifier** team, and after speaking a bit with him we determined the issue was actually (a bit) worse as it also happens in a single-threaded context.
+I updated the sample code with a `TestIsSingleThread` define that also triggers the breakpoint. I left the multi-threaded version of the test for reference.
 Note that we could probably reduce the code again, but the faulty code seems to have been located so I won't bother with it.
+
 Hopefully the fix will land soon!
 
 
