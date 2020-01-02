@@ -9,7 +9,7 @@ Aka:Story of one man-month of development lost due to a bug in a debugging tool.
 
 ![jackiechan-meme](/images/jackiechan-meme.jpg)
 
-# Memory corruption
+## Memory corruption
 
 Memory corruption can be hard to track, especially when you have a multithreaded application with features that makes it hard to reproduce.
 This is generally the case for games, where thousands of factors can make a race condition appear, or not. Framerate could be unstable, the GPU could take a bit more time than usual to render, something being streamed from the internet took a bit longer than usual.
@@ -22,19 +22,19 @@ It seems that it does a bit more than just enabling the gflags [Page Heap Verifi
 The Page Heap Verification can be used not only to track memory corruption but also leaks, and works with any application using new/malloc/HeapAlloc for allocations. More info on how to use it from windbg [here](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/-heap). 
 Sounds great right? I have been using this tool for a while now. But the last time I used it, I had issues finding where the bug it detected came from.
 
-# A seemingly inconsistent crash
+## A seemingly inconsistent crash
 
 I usually fire up WinDbg to find the cause of the crash, so that I can easily inspect the memory that was corrupted.
 Most of the time, I saw the crash happening in DirectX or in the GPU driver. Usually, this does not sound good. I also sometimes had this particular crash in libcurl.
 For a while I couldn't figure out what the issue was. Callstacks had nothing in common but somehow, it was not random.
 A few callstacks kept appearing in those two libraries. 
-At first, I thought we might have had some incompatibility in libcurl with it's allocations. I made sure we compiled it with the correct flag, set the allocation functions at init. And bam! No more issues.
+At first, I thought we might have had some incompatibility in libcurl with it's allocations. I made sure we compiled it with the correct flag, set the allocation functions at init. And *BAM!* No more issues.
 
 It seemed like a weird fix since curl allocates everything using its own functions, and is wrapped in its own .dll. 
 But the bug disappeared. And as our QA didn't reproduce it unless they used AppVerifier so we decided to stop worrying about it. 
 I spent about a week or two looking for various causes for the crash, found potential bugs in other parts so it was kind of worth it anyway.
 
-# The return of the crash
+## The return of the crash
 
 Until we had another memory corruption. As usual I fired up AppVerifier and WinDbg. After running the game a few times, I found the crash we were looking for. However I did also encounter the old DirectX crash once. It was not gone...
 So I fixed one issue. Then another. Used static analysis tools, other applications such as Intel Inspector, coded my own page guards, but nothing did it. I kept disabling gameplay features, but the bug stayed. And was most of the time getting harder to reproduce. 
@@ -52,7 +52,7 @@ My hypothesis was the following:
 
 And that's where I made a mistake. I thought that my tooling was bug-free. But let's get back to the problem.
 
-# A reach for help
+## A reach for help
 
 At some point, unable to find the source of the bug, I sent a mail to the DirectX team with a (huge) crashdump. 
 I was first told it probably was a mistake on our side. I was kind of expecting this, DirectX is used in a lot of games and never showed such issue. And it only happened when using debug tools such as AppVerifier. 
@@ -69,7 +69,7 @@ The weird part was that it didn't seem to happen without the debug heap enabled.
 So we sent a mail to the AppVerifier owner, which didn't really believe us at the beggining. This is fair since nobody ever reported this for ages. He tried a small sample and could not reproduce, though it was a single-threaded sample.
 I knew our issue was a multi-threading issue, so I had to get proof backing up my claims.
 
-# Burden of proof
+## Burden of proof
 
 During the same period, I was learning how to use Microsoft's [Detours](https://github.com/Microsoft/Detours) library for a side project of my own. I then decided to put this to profit, and detour the `HeapAlloc` function, replacing it by the simple yet effective following code:
 
@@ -115,7 +115,7 @@ You will note that AppVerifier will trigger the breakpoint for all define config
 This is because `realloc` does not call `HeapReAlloc`. We can safely conclude that the issue happens only when calling `HeapReAlloc` from a multi-threaded context (it does not happen in a single-threaded one). 
 Quite rare, but we were doing a lot of (re)allocations during loading, and allocating DirectX buffers on another thread so this triggered rather often on our codebase.  
 
-# A bit of insight gained
+## A bit of insight gained
 
 That's why I wanted to tell you that even though it rarely happens, your debugging tools might fail you!
 Always start by doubting your code, then your libraries, drivers, compiler, debugger, OS and lastly your hardware.
