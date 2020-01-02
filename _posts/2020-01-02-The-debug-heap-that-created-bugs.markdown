@@ -128,4 +128,4 @@ For those who still want to use it and might have the same issue, know that you 
 
 Maybe a topic for a future post?
 
-
+Reddit [thread](https://www.reddit.com/r/cpp/comments/ej39ma/the_debug_heap_that_created_bugs/) for comments.
