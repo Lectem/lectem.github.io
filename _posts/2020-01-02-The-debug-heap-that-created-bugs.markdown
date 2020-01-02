@@ -86,7 +86,7 @@ DECLSPEC_ALLOCATOR LPVOID MyHeapAlloc(
     const char* pMem = (const char*)memoryBlock;
     if(dwFlags & HEAP_ZERO_MEMORY)
     {
-        for (size_t i = 0; i < cb; ++i)
+        for (size_t i = 0; i < dwBytes; ++i)
         {
             if (pMem[i] != 0)
             {
