@@ -3,10 +3,13 @@ layout: post
 title:  "The Debug heap that created bugs"
 categories: windows heap appverifier detours
 ---
-
+ 
 Aka:Story of one man-month of development lost due to a bug in a debugging tool.
 
 ![jackiechan-meme](/images/jackiechan-meme.jpg)
+
+
+** Update Jan 3, 2020: ** The bug is also present with single-threaded applications.
 
 ## Memory corruption
 
@@ -113,7 +116,7 @@ To enable **Appverifier**, add your application to the list, and for the debug h
 ![appverifier-debug-heap](/images/appverifier/appverifier-debug-heap.png)
 
 You will note that **AppVerifier** will trigger the breakpoint for all define configurations except `AllocMethod_malloc` and `AllocMethod_ProcessHeapNoRealloc`.
-This is because `realloc` does not call `HeapReAlloc`. We can safely conclude that the issue happens only when calling `HeapReAlloc` from a multi-threaded context (it does not happen in a single-threaded one). 
+This is because `realloc` does not call `HeapReAlloc`. We can safely conclude that the issue happens only when calling `HeapReAlloc` ~~from a multi-threaded context (it does not happen in a single-threaded one)~~. **See the update.** 
 Quite rare, but we were doing a lot of (re)allocations during loading, and allocating **DirectX** buffers on another thread so this triggered rather often on our codebase.  
 
 ## A bit of insight gained
@@ -127,5 +130,13 @@ For people with access to the **Microsoft** bug database (I don't) this is regis
 For those who still want to use it and might have the same issue, know that you can write a small detours .dll that will do the zero-fill no matter what. 
 
 Maybe a topic for a future post?
+
+## Update following discussions again
+
+@MSFTJesse [reddit comment](https://www.reddit.com/r/cpp/comments/ej39ma/the_debug_heap_that_created_bugs/fcvll29?utm_source=share&utm_medium=web2x) kindly sent a [time travel debugging](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/time-travel-debugging-overview) trace to the **AppVerifier** team, and after speaking a bit with him we determined the issue was actually (a bit) worse as it also happens in a single-threaded context.
+I updated the sample code with a `TestIsSingleThread` that also triggers the breakpoint. I left the multi-threaded version of the test for reference.
+Note that we could probably reduce the code again, but the faulty code seems to have been located so I won't bother with it.
+Hopefully the fix will land soon!
+
 
 Reddit [thread](https://www.reddit.com/r/cpp/comments/ej39ma/the_debug_heap_that_created_bugs/) for comments.
