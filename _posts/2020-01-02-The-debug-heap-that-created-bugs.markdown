@@ -2,7 +2,6 @@
 layout: post
 title:  "The Debug heap that created bugs"
 categories: windows heap appverifier detours
-hidden: true
 ---
 
 Aka:Story of one man-month of development lost due to a bug in a debugging tool.
